@@ -1,0 +1,10 @@
+text_to_translate = input("Enter some text: ")
+letter_a = text_to_translate.replace("a", "4")
+letter_b = letter_a.replace("b", "8")
+letter_e = letter_b.replace("e", "3")
+letter_l = letter_e.replace("l", "1")
+letter_o = letter_l.replace("o", "0")
+letter_s = letter_o.replace("s", "5")
+letter_t = letter_s.replace("t", "7")
+translated_text = letter_t
+print(translated_text)
