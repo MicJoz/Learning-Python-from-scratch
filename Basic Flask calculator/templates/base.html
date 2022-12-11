@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form action='/name', method='POST'>-->
+<!--        <label>Name:-->
+<!--            <input type='text' name='user_name'>-->
+<!--        </label>-->
+<!--            <label>-->
+<!--                <button type='submit'>-->
+<!--                Send-->
+<!--                </button>-->
+<!--            </label>-->
+<!--    </form>-->
+<!--{{msg}}-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action='/calc', method='POST'>
+        <label>Podaj pierwszą liczbę:
+            <input type='number' name='num1'>
+        </label>
+        <label>Podaj drugą liczbę:
+            <input type='number' name='num2'>
+        </label>
+        <select name="operation">
+            <option value="Addition">+</option>
+            <option value="Subtraction">-</option>
+            <option value="Multiplication">*</option>
+            <option value="Division">/</option>
+        </select>
+        <label>
+            <button type='submit'>
+                Oblicz wynik
+            </button>
+        </label>
+    </form>
+</body>
+</html>
