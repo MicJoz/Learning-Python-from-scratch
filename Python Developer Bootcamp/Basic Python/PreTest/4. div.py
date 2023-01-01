@@ -8,4 +8,5 @@ def div(min, max):
     return div_list
 
 
-print(div(min, max))
+if __name__ == '__main__':
+    print(div(min, max))
