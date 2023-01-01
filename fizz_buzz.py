@@ -12,4 +12,5 @@ def fizz_buzz(min, max):
             print(i)
 
 
-fizz_buzz(min, max)
+if __name__ == "__main__":
+    fizz_buzz(min, max)
