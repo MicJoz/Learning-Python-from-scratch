@@ -1,17 +1,11 @@
-def check_palindrome(text):
-    text = text.lower()
-    text_no_spaces = ""
-    for i in text:
-        if i == " ":
-            continue
-        else:
-            text_no_spaces += i
-
-    if text_no_spaces == text_no_spaces[::-1]:
+def check_palindrome(word_to_check):
+    word = word_to_check.lower()
+    if word == word[::-1]:
         return True
     else:
         return False
 
 
-str_to_check = input("Enter text: ")
-print(check_palindrome(str_to_check))
+if __name__ == "__main__":
+    word_to_check = input("Enter a word to check: ")
+    print(check_palindrome(word_to_check))
