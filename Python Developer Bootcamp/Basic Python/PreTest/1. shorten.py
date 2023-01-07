@@ -1,11 +1,12 @@
 def shorten(text):
-    text_to_shorten = text[0]
-    for i in range(0, len(text)):
-        if text[i] == " ":
-            text_to_shorten += text[i + 1]
-    return text_to_shorten.upper()
+    text_to_shorten = text.split()
+    output = ""
+    for item in text_to_shorten:
+        output += item[0].upper()
+    return output
 
 
-text = input("Enter a string to shorten: ")
-print(shorten(text))
+if __name__ == "__main__":
+    str_to_shorten = input("Enter a string to shorten: ")
+    print(shorten(str_to_shorten))
 
