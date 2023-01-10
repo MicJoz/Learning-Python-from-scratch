@@ -34,10 +34,10 @@ def printing_user_numbers(user):
 
 def getting_comp_numbers():
     comp_random_numbers = []
-    i = 1
-    while i <= 6:
-        comp_random_numbers.append(randint(1, 49))
-        i += 1
+    while len(comp_random_numbers) < 6:
+        temp = randint(1, 49)
+        if temp not in comp_random_numbers:
+            comp_random_numbers.append(temp)
     return sorted(comp_random_numbers)
 
 
@@ -48,16 +48,20 @@ def printing_comp_numbers(comp):
     return comp_numbers[0:-2]
 
 
+def compairing_numbers(user, comp):
+    hits = 0
+    for number in user:
+        if number in comp:
+            hits += 1
+    return hits
+
+
 def lotto():
     user = getting_user_numbers()
     print(f"\nYour numbers are: {printing_user_numbers(user)}.")
     comp = getting_comp_numbers()
     print(f"\nComputer numbers are: {printing_comp_numbers(comp)}.")
-    hits = 0
-    for number in user:
-        if number in comp:
-            hits += 1
-    print(f"\nTotal hits: {hits}")
+    print(f"\nTotal hits: {compairing_numbers(user, comp)}")
 
 
 if __name__ == "__main__":
