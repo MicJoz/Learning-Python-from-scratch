@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess a number</title>
+</head>
+<body>
+    <form action='/guess', method='POST'>
+        <label>Your guess:
+            <input type="number" name='guess'>
+        </label>
+        <label>
+            <button type='submit'>
+                Check
+            </button>
+        </label>
+        {{msg}}
+    </form>
+</body>
+</html>
